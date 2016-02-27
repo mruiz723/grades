@@ -67,7 +67,7 @@
         <!--Notas-->
         <scene sceneID="zUF-Sa-IDM">
             <objects>
-                <viewController id="S10-5J-nN9" sceneMemberID="viewController">
+                <viewController id="S10-5J-nN9" customClass="GradesViewController" customModule="Grades" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tMF-2z-5DP"/>
                         <viewControllerLayoutGuide type="bottom" id="gnb-k5-8WF"/>
@@ -79,19 +79,35 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semestre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Na-2o-at6">
                                 <rect key="frame" x="264" y="72" width="73" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MHA-sW-MDa">
                                 <rect key="frame" x="0.0" y="107" width="600" height="493"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gradeCell" id="MaN-5J-M0y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gradeCell" textLabel="H88-wh-sTN" detailTextLabel="hhi-MC-GjV" style="IBUITableViewCellStyleSubtitle" id="MaN-5J-M0y">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MaN-5J-M0y" id="lBZ-H2-cRc">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H88-wh-sTN">
+                                                    <rect key="frame" x="15" y="5" width="32" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hhi-MC-GjV">
+                                                    <rect key="frame" x="15" y="25" width="41" height="14"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -123,7 +139,7 @@
         <!--Detalle-->
         <scene sceneID="O6J-nj-Qnx">
             <objects>
-                <viewController id="v9I-cS-7aa" sceneMemberID="viewController">
+                <viewController id="v9I-cS-7aa" customClass="DetailViewController" customModule="Grades" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I8v-X1-JwR"/>
                         <viewControllerLayoutGuide type="bottom" id="3zw-d1-iCV"/>
@@ -133,42 +149,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsE-gh-GU8">
-                                <rect key="frame" x="218" y="94" width="165" height="96"/>
+                                <rect key="frame" x="218" y="94" width="165" height="116"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-MZ-vlM">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="116"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Materia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHj-zc-LDH">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Nota:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxk-NO-w0M">
-                                                <rect key="frame" x="0.0" y="80" width="33" height="16"/>
+                                                <rect key="frame" x="0.0" y="100" width="33" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Z57-EG-mng">
-                                        <rect key="frame" x="50" y="0.0" width="115" height="96"/>
+                                        <rect key="frame" x="50" y="0.0" width="115" height="116"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taller de Ingeniería de Software" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52U-P5-Jk8">
-                                                <rect key="frame" x="0.0" y="0.0" width="115" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="115" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="115" id="6V4-rb-4RB"/>
-                                                    <constraint firstAttribute="height" constant="40" id="sNP-tK-alC"/>
+                                                    <constraint firstAttribute="height" constant="60" id="sNP-tK-alC"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s7G-fY-caY">
+                                                <rect key="frame" x="0.0" y="80" width="115" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="115" id="HnA-9c-uzv"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="iNJ-6p-DLK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pK-c9-dbE">
-                                                <rect key="frame" x="0.0" y="80" width="20" height="16"/>
+                                                <rect key="frame" x="0.0" y="100" width="20" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -176,9 +201,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ts-op-94b">
-                                <rect key="frame" x="280" y="209" width="40" height="30"/>
+                                <rect key="frame" x="280" y="229" width="40" height="30"/>
                                 <state key="normal" title="Editar"/>
                                 <state key="selected" title="Guardar"/>
+                                <connections>
+                                    <action selector="edit:" destination="v9I-cS-7aa" eventType="touchUpInside" id="ams-VS-GwJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,6 +218,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detalle" id="FkX-8a-JPc"/>
+                    <connections>
+                        <outlet property="editButton" destination="5ts-op-94b" id="5Ig-sE-Hqf"/>
+                        <outlet property="gradeLabel" destination="5pK-c9-dbE" id="wTq-Tq-UP2"/>
+                        <outlet property="gradeTextField" destination="s7G-fY-caY" id="Bgt-2j-gZo"/>
+                        <outlet property="nameCourseLabel" destination="52U-P5-Jk8" id="P0S-zv-A5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ys3-hQ-RIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
