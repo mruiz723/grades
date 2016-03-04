@@ -8,8 +8,12 @@
 
 import UIKit
 
-class GradesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class GradesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, DetailViewControllerDelegate {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     // MARK: - Properties
     var courses = [Course]()
     let cellIdentifier = "gradeCell"
@@ -37,6 +41,7 @@ class GradesViewController: UIViewController, UITableViewDataSource, UITableView
         
         if let detailVC = segue.destinationViewController as? DetailViewController{
             if let course = sender as? Course{
+                detailVC.delegate = self
                 detailVC.course = course
             }
         }
@@ -65,22 +70,15 @@ class GradesViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // MARK: - DetailViewControllerDelegate
+    func updateGrade(course: Course, withGrade grade: Float) {
+        let index = courses.indexOf { $0 === course }
 
+        if index != nil{
+            course.grade = grade
+            courses[index!] = course
+            tableView.reloadData()
+        }
+        
+    }
 }

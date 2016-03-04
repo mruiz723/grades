@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol DetailViewControllerDelegate:NSObjectProtocol {
+    
+    func updateGrade(course:Course, withGrade grade:Float)
+    
+}
+
 class DetailViewController: UIViewController {
 
     //MARK: IBOutlets
@@ -15,8 +21,13 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var gradeLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var gradeTextField: UITextField!
+    
+    //MARK: Properties
+    var delegate:DetailViewControllerDelegate?
+    
     //MARK: IBActions
     @IBAction func edit(sender: AnyObject) {
+        self.view.endEditing(true)
         if editButton.selected{
             editButton.selected = false
             if let gradeFloat = Float(gradeTextField.text!){
@@ -24,6 +35,7 @@ class DetailViewController: UIViewController {
                     gradeLabel.text = gradeTextField.text
                     gradeLabel.hidden = false
                     gradeTextField.hidden = true
+                    delegate?.updateGrade(course, withGrade: gradeFloat)
                 }else{
                     let alert = UIAlertController(title: "Error", message: "Debe ingresar un número entre 0.0 y 5.0", preferredStyle: .Alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
